@@ -1,2 +1,3 @@
 # project-javascript-jquery
-The Odin ProjectProject: Javascript/jQuery
+The Odin Project
+Project: Javascript/jQuery
