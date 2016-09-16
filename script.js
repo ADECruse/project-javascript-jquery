@@ -9,6 +9,11 @@ $(document).ready(function() {
 		count++;
 	};
 	
+	$('.grid').hover(function() {
+	$(this).addClass("black");
+});
+
+
 });
 
 
