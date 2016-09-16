@@ -1,0 +1,17 @@
+#wrapper {
+	float: left;
+	width: 1032px;
+	height: 1032px;
+	border: 1px solid black;
+}
+
+.grid {
+
+	float: left;
+	clear: right;
+	width: 62.5px;
+	height: 62.5px;
+	border: 1px solid black;
+	
+
+}
