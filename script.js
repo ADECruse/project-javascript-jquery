@@ -2,7 +2,8 @@ $(document).ready(function() {
 
 	$('button').click(function() {
 		$('.grid').removeClass("black");
-		$('#wrapper').empty();
+		$('#wrapper').empty().css("background-color", "black");
+
 		var div=$('<div class="grid"></div>');
 		var input = Number(window.prompt('Please enter grid size','32'));
 		var size = (700 / input) - 2
@@ -13,12 +14,22 @@ $(document).ready(function() {
 			$(div).last().clone().appendTo('#wrapper');
 			count++;
 		};
-		$('.grid').height(size).width(size);
+		var color = 1;
+		$('.grid').height(size).width(size).css("background-color", "white");
 
-	$('.grid').hover(function() {
-		$(this).addClass("black");
+	$('.grid').mouseenter(function() {
+		var gradient = $(this).css("opacity");
+		if (gradient > 0) {
+			$(this).css("opacity", "-=0.1");
 
-});
+			console.log(gradient)
+		};
+		
+					
+		
+		
+
+}); 
 	});
 
 	

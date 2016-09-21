@@ -1,9 +1,12 @@
 
 h1 {
+	display: block;
 	text-align: center;
 	font-size: 90px;
 	margin-top: 5px;
 	margin-bottom: 5px;
+	margin-left: auto;
+ 	margin-right: auto;
 }
 
 h2 {
@@ -40,9 +43,11 @@ button {
 	float: none;
 	width: 700px;
 	height: 700px;
-	border: 1px solid black;
+	border: none;
 	margin-right: auto;
 	margin-left: auto;
+	margin-top: 5px;
+	
 }
 
 .grid {
@@ -52,10 +57,14 @@ button {
 	border: 1px solid black;
 	height: auto;
 	width: auto;
+	opacity: 1.0;
+	
+	
 
 }
 
 .black {
 
 	background-color: black;
+	background: rgba(0, 0, 0, 1.0);
 }
