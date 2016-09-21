@@ -37,7 +37,7 @@ $(document).ready(function() {
 
 			var div=$('<div class="grid"></div>');
 			var input = Number(window.prompt('Please enter grid size','32'));
-			var size = (960 / input) - 2
+			var size = Math.floor(960 / input) - 2
 			var count = 0;
 			var squared = input * input;
 			while (count < squared) {
@@ -65,7 +65,7 @@ $(document).ready(function() {
 
 		var div=$('<div class="grid"></div>');
 		var input = Number(window.prompt('Please enter grid size','32'));
-		var size = (960 / input) - 2
+		var size = Math.floor(960 / input) - 2
 		var count = 0;
 		var squared = input * input;
 		while (count < squared) {
