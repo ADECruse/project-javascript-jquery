@@ -1,11 +1,21 @@
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+body {
+	font-size: 1.6rem;
+	line-height: 1.6;
+}
+
 #container {
-	
+	display: grid;
+
 }
 
 h1 {
 	display: block;
 	text-align: center;
-	font-size: 90px;
+	/* font-size: 90px; */
 	margin-top: 5px;
 	margin-bottom: 5px;
 	margin-left: auto;
@@ -26,21 +36,20 @@ h3 {
 }
 
 #buttons {
+	display: flex;
+	flex-direction: row;
 	height: 80px;
 	width: 380px;
 	padding: 10px 15px 10px 15px;
  	margin: 5px auto 5px auto;
-
 }
 
-button {
-	
-	float: left;
-	display: inline-block;
+button {	
+	/* display: inline-block; */
 	background-color: white;
 	border-style: none;
  	border: 1px solid black;
- 	font-size: 13px;
+ 	/* font-size: 13px; */
  	font-weight: bold;
  	height: 40px;
  	width: 100px;
@@ -51,7 +60,9 @@ button {
 }
 
 #grid {
-	
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
 	
 	width: 960px;
 	height: 960px;
@@ -64,15 +75,8 @@ button {
 }
 
 .cell {
-
-	float: left;
-	clear: right;
 	border: 1px solid black;
 	opacity: 1.0;
-
-	
-	
-
 }
 
 .black {
