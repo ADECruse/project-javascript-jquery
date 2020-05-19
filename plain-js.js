@@ -21,19 +21,18 @@ const resetGrid = function (e) {
 }
 
 const createGrid = function (e) {
-    // resetGrid();
     console.log(e)
     const div = document.createElement('div')
     div.classList.add('cell');
-    var input = Number(window.prompt('Please enter grid size','32'));
+    const input = Number(window.prompt('Please enter grid size','32'));
     console.log(input);
-    var size = Math.floor(960 / input) - 2;
+    const size = Math.floor(960 / input) - 2;
     console.log(size);
 
-    var count = 0;
+    let count = 0;
     console.log(count);
 
-    var squared = input * input;
+    const squared = input * input;
     console.log(squared);
    
     while (count < squared) { 
@@ -48,6 +47,7 @@ const createGrid = function (e) {
 const newClassicGrid = function (e) {
     resetGrid();
     createGrid();
+    const cell = document.querySelectorAll('.cell');
     cell.forEach(e => e.addEventListener('mouseover', addBlack));
 }
 
