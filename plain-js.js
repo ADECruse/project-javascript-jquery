@@ -28,10 +28,11 @@ const resetGrid = function (e) {
     while (grid.hasChildNodes()) {
         grid.removeChild(grid.firstChild);
     }
+    grid.style.backgroundColor = 'transparent';
+
 }
 
 const createGrid = function (e) {
-    console.log(e)
     const div = document.createElement('div')
     div.classList.add('cell');
     const input = Number(window.prompt('Please enter grid size','32'));
