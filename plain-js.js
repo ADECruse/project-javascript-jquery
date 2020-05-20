@@ -9,13 +9,14 @@ const addBlack = function (e) {
 }
 
 const addGradientBlack = function (e) {
-    let gradient = this.style.opacity;
-    this.style.opacity = "-=0.1";
-    console.log("Gradient" + gradient);
-	if (gradient > 0) {
-		
-        console.log("Gradient" + gradient);
-	};
+    // Get the cell's current opacity value, important! only works if opacity is set with JS as inline styling.
+    let cellOpacity = this.style.opacity;
+    console.log("Current Opacity" + cellOpacity);
+    if (cellOpacity > 0) {
+        cellOpacity -= 0.1;
+    }
+    console.log("New Opacity" + cellOpacity);
+    this.style.opacity = cellOpacity;
 }
 
 const addRainbow = function (e) {
@@ -63,9 +64,12 @@ const newClassicGrid = function (e) {
 const newGradientGrid = function (e) {
     resetGrid();
     createGrid();
-    grid.style.backgroundColor = 'white';
+    grid.style.backgroundColor = 'black';
     const cell = document.querySelectorAll('.cell');
-    cell.forEach(e => e.addEventListener('mouseover', addRainbow));
+    cell.forEach(e => e.style.backgroundColor = 'white');
+    cell.forEach(e => e.style.opacity = '1.0');
+
+    cell.forEach(e => e.addEventListener('mouseover', addGradientBlack));
 }
 
 const newRainbowGrid = function (e) {
@@ -78,5 +82,3 @@ const newRainbowGrid = function (e) {
 classicButton.addEventListener('click', newClassicGrid);
 gradientButton.addEventListener('click', newGradientGrid);
 rainbowButton.addEventListener('click', newRainbowGrid);
-
-// cell.forEach(e => e.addEventListener('hover', addBlack))

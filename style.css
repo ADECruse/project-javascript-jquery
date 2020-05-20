@@ -1,6 +1,7 @@
 html {
 	font-size: 62.5%;
 	scroll-behavior: smooth;
+	
 }
 body {
 	font-size: 1.6rem;
@@ -9,7 +10,6 @@ body {
 
 #container {
 	display: grid;
-
 }
 
 h1 {
@@ -76,7 +76,6 @@ button {
 
 .cell {
 	border: 1px solid black;
-	opacity: 1.0;
 }
 
 .black {
